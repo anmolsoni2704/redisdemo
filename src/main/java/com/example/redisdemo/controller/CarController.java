@@ -35,4 +35,9 @@ public class CarController {
     public Car createCar(@RequestBody Car car) {
        return carService.createCar(car.getCompany(), car.getModel());
     }
+
+    @DeleteMapping("/")
+    public void deleteAllCars() {
+        carService.deleteCars();
+    }
 }
